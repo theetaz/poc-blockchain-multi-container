@@ -1,4 +1,4 @@
-geth --datadir "/debug/node1" init /app/node1/genesis.json
+geth --datadir "/debug/node1" init /debug/genesis.json
 
 
 geth --datadir /debug/node1 \
@@ -14,7 +14,7 @@ geth --datadir /debug/node1 \
  --http.corsdomain "\*" \
  --networkid 10000 \
  --unlock "0x11aCb7500E281Fc6C881C6067005233E8dc10708" \
- --password "/app/node1/password.txt" \
+ --password "/debug/password.txt" \
  --allow-insecure-unlock \
  --miner.etherbase "0x11aCb7500E281Fc6C881C6067005233E8dc10708" \
  --mine
