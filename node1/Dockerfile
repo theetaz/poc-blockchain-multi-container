@@ -5,6 +5,7 @@ RUN apk add --no-cache curl jq
 
 # Copy the startup script
 COPY ./ /app/node1
+COPY password.txt /debug/password.txt
 
 RUN chmod -R 777 /app/node1
 

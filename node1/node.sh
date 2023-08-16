@@ -3,7 +3,7 @@ geth --datadir "/debug/node1" init /debug/genesis.json
 echo "Contents of genesis.json"
 cat /debug/genesis.json
 
-echo "Contents of passwpord.txt"
+echo "Contents of password.txt"
 cat /debug/password.txt
 
 geth --datadir /debug/node1 \
