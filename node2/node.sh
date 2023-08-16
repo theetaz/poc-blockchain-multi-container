@@ -1,6 +1,6 @@
-geth --datadir "/app/node2" init /app/node2/genesis.json
+geth --datadir "/debug/node2" init /app/node2/genesis.json
 
-geth --datadir app/node2 \
+geth --datadir /debug/node2 \
  --syncmode "full" \
  --port 30312 \
  --http \
@@ -13,7 +13,7 @@ geth --datadir app/node2 \
  --http.corsdomain "\*" \
  --networkid 10000 \
  --unlock "0x69F553e4e2b5ad160Ab3FBE4723381ffD65A6A6C" \
- --password "app/node2/password.txt" \
+ --password "/app/node2/password.txt" \
  --allow-insecure-unlock \
  --miner.etherbase "0x69F553e4e2b5ad160Ab3FBE4723381ffD65A6A6C" \
  --mine
