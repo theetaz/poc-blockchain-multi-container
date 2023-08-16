@@ -1,5 +1,8 @@
 #!/bin/bash
 
+mkdir -p /debug/node1
+mkdir -p /debug/node1/geth
+
 geth --datadir "/debug/node1" init /debug/genesis.json
 
 geth --datadir /debug/node1 \
