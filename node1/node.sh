@@ -1,13 +1,10 @@
+
+mkdir -p /debug/node1
+
 # Write the content "1234" into /debug/password.txt
 echo "1234" > /debug/password.txt
 
 geth --datadir "/debug/node1" init /debug/genesis.json
-
-echo "Contents of genesis.json"
-cat /debug/genesis.json
-
-echo "Contents of password.txt"
-cat /debug/password.txt
 
 geth --datadir /debug/node1 \
  --syncmode "full" \
