@@ -1,10 +1,8 @@
 #!/bin/bash
 
-sudo mkdir -p /debug/node1
+geth --datadir "/debug/node1" init /debug/genesis.json
 
-sudo geth --datadir "/debug/node1" init /debug/genesis.json
-
-sudo geth --datadir /debug/node1 \
+geth --datadir /debug/node1 \
  --syncmode "full" \
  --port 30311 \
  --http \
