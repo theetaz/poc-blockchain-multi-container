@@ -6,10 +6,6 @@ RUN apk add --no-cache curl jq
 # Copy the startup script
 COPY ./ /app/node1
 
-RUN chmod -R 777 /app/node1
-
-RUN chmod -R 777 /debug
-
 # Create a user with a known UID/GID within range 10000-20000.
 # This is required by Choreo to run the container as a non-root user.
 RUN adduser \
