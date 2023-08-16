@@ -39,11 +39,11 @@ EOF
 NODE2_PASSWORD=$(cat /debug/password.txt)
 echo $NODE2_PASSWORD > /debug/node2/password.txt
 geth account new --datadir /debug/node2 --password /debug/node2/password.txt >> $LOG_FILE 2>&1
-NODE2_PASSWORD=$(geth --datadir /debug/node2 account list | head -1 | awk -F'[{}]' '{print $2}')
+NODE2_ADDRESS=$(geth --datadir /debug/node2 account list | head -1 | awk -F'[{}]' '{print $2}')
 
 
 # Replace node addresses in the genesis.json file
-sed -i "s/<node2_address>/$NODE2_PASSWORD/g" /debug/genesis.json
+sed -i "s/<node2_address>/$NODE2_ADDRESS/g" /debug/genesis.json
 
 # Initialize node1 and node2 with the genesis.json file
 geth --datadir /debug/node2 init /debug/genesis.json >> $LOG_FILE 2>&1
