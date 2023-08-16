@@ -1,3 +1,5 @@
+#!/bin/bash
+
 geth --datadir "/debug/node2" init /app/node2/genesis.json
 
 geth --datadir /debug/node2 \

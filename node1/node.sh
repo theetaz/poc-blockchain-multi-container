@@ -1,8 +1,6 @@
+#!/bin/bash
 
 mkdir -p /debug/node1
-
-# Write the content "1234" into /debug/password.txt
-echo "1234" > /debug/password.txt
 
 geth --datadir "/debug/node1" init /debug/genesis.json
 
@@ -19,7 +17,7 @@ geth --datadir /debug/node1 \
  --http.corsdomain "\*" \
  --networkid 10000 \
  --unlock "0x11aCb7500E281Fc6C881C6067005233E8dc10708" \
- --password "debug/password.txt" \
+ --password "/debug/password.txt" \
  --allow-insecure-unlock \
  --miner.etherbase "0x11aCb7500E281Fc6C881C6067005233E8dc10708" \
  --mine
