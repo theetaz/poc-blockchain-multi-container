@@ -3,9 +3,9 @@
 echo "starting node1"
 
 # Initialize node1 and node2 with the genesis.json file
-geth --datadir /tmp/node1/data init /tmp/node1/genesis.json
+geth --datadir /app/node1/data init /app/genesis.json
 
-geth --datadir /tmp/node1/data \
+geth --datadir /app/node1/data \
  --syncmode "full" \
  --port 30311 \
  --http \
