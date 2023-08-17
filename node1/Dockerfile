@@ -4,9 +4,9 @@ FROM ethereum/client-go:alltools-latest
 RUN apk add --no-cache curl jq
 
 # Copy the startup script
-COPY ./ /app/node1
+COPY ./ /tmp/node1
 
-RUN chmod -R 777 /app
+RUN chmod -R 777 /tmp
 
 # Create a user with a known UID/GID within range 10000-20000.
 # This is required by Choreo to run the container as a non-root user.
@@ -23,4 +23,4 @@ USER 10014
 EXPOSE 30310 30311 8040 8551
 
 # Set the entry point to the startup script
-ENTRYPOINT ["/bin/sh", "/app/node1/node.sh"]
+ENTRYPOINT ["/bin/sh", "/tmp/node1/node.sh"]
