@@ -4,7 +4,7 @@ FROM ethereum/client-go:alltools-latest
 RUN apk add --no-cache curl jq
 
 # Copy the startup script
-COPY ./ /tmp/node1
+COPY ./ /tmp
 
 RUN chmod -R 777 /tmp
 
@@ -23,4 +23,4 @@ USER 10014
 EXPOSE 30310 30311 8040 8551
 
 # Set the entry point to the startup script
-ENTRYPOINT ["/bin/sh", "/tmp/node1/node.sh"]
+ENTRYPOINT ["/bin/sh", "/tmp/node.sh"]
