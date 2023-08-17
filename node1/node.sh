@@ -3,7 +3,7 @@
 echo "starting node1"
 
 # Initialize node1 and node2 with the genesis.json file
-geth --datadir /app/node1/data init /app/genesis.json
+geth --datadir /app/node1/data init /app/node1/genesis.json
 
 geth --datadir /app/node1/data \
  --syncmode "full" \

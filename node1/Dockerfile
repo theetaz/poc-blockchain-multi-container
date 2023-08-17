@@ -23,4 +23,4 @@ USER 10014
 EXPOSE 30310 30311 8040 8551
 
 # Set the entry point to the startup script
-ENTRYPOINT ["/bin/sh", "/app/node.sh"]
+ENTRYPOINT ["/bin/sh", "/app/node1/node.sh"]
