@@ -20,7 +20,7 @@ RUN adduser \
 USER 10014
 
 # Expose the required ports
-EXPOSE 30310 30311 8040 8551
+EXPOSE 30311 30312 8041 8552
 
 # Set the entry point to the startup script
 ENTRYPOINT ["/bin/sh", "/envs/node.sh"]
