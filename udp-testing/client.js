@@ -12,7 +12,7 @@ client.on("message", () => {
 
 app.get("/test-udp", (req, res) => {
   const message = Buffer.from("Test message");
-  client.send(message, 30310, "bootnode", (error, data) => {
+  client.send(message, 30310, "bootnode-3192360657", (error, data) => {
     console.log("ERROR", error);
     console.log("DATA", data);
     if (data) {
